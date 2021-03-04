@@ -1,0 +1,14 @@
+commands.dimension.usage=/dimension <entity> <dimensionId>
+commands.dimension.success.dimension=Teleported %s to different%s
+
+tile.ultimanium.name=Block of Ultimanium
+tile.ultimex.name=Block of Ultimex
+tile.ultez.name=Block of Ultez
+
+tile.deathFusion.name=Block of Death Fusion
+tile.deathFusion.dirt.name=Death Fusion Dirt
+tile.deathFusion.grass.name=Death Fusion Grass
+tile.deathFusion.stone.name=Death Fusion Stone
+tile.deathFusion.sapling.name=Death Fusion Sapling
+tile.deathFusion.log.name=Death Fusion Log
+tile.deathFusion.leaves=Death Fusion Leaves

@@ -1,0 +1,6 @@
+{
+	"forge_marker": 1,
+	"variants": {
+		"normal": { "model": "voidbreak:death_fusion_leaves" }
+	}
+}

@@ -1,0 +1,14 @@
+[{
+	"modid": "sulviccore",
+	"name": "Sulvic Mod Core",
+	"description": "The Main Mod for all my other mods and default content.",
+	"version": "${sc_version}",
+	"mcversion": "${mc_version}",
+	"url": "",
+	"updateUrl": "",
+	"authorList": ["Crimzega"],
+	"credits": "The Forge & FML team for making this mod possible.",
+	"logoFile": "",
+	"screenshots": [],
+	"dependencies": []
+}]

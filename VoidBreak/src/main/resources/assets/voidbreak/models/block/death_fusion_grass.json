@@ -1,0 +1,13 @@
+{
+	"forge_marker": 1,
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"particle": "voidbreak:blocks/death_fusion_grass/side",
+		"north": "voidbreak:blocks/death_fusion_grass/side",
+		"east": "voidbreak:blocks/death_fusion_grass/side",
+		"west": "voidbreak:blocks/death_fusion_grass/side",
+		"south": "voidbreak:blocks/death_fusion_grass/side",
+		"up": "voidbreak:blocks/death_fusion_grass/top",
+		"down": "voidbreak:blocks/death_fusion_dirt"
+	}
+}

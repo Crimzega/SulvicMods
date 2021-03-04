@@ -1,0 +1,15 @@
+{
+	"forge_marker": 1,
+	"variants": {
+		"age": {
+			"0": { "model": "sulviccore:sweet_potatoes0" },
+			"1": { "model": "sulviccore:sweet_potatoes0" },
+			"2": { "model": "sulviccore:sweet_potatoes1" },
+			"3": { "model": "sulviccore:sweet_potatoes1" },
+			"4": { "model": "sulviccore:sweet_potatoes2" },
+			"5": { "model": "sulviccore:sweet_potatoes2" },
+			"6": { "model": "sulviccore:sweet_potatoes2" },
+			"7": { "model": "sulviccore:sweet_potatoes3" }
+		}
+	}
+}

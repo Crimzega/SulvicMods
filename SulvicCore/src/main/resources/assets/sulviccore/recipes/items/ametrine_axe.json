@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "sulvic_axe",
+	"pattern": [
+		"GG",
+		"GS",
+		" S"
+	],
+	"key": {
+		"G": {
+			"item": "sulviccore:gem",
+			"data": 13
+		},
+		"S": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"item": "sulviccore:ametrine_axe"
+	}
+}

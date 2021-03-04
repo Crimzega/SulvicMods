@@ -1,0 +1,11 @@
+{
+	"forge_marker": 1,
+	"variants": {
+		"facing": {
+			"east": { "model": "sulviccore:oak_shelf" },
+			"west": { "model": "sulviccore:oak_shelf", "y": 180, "uvlock": true },
+			"south": { "model": "sulviccore:oak_shelf", "y": 90, "uvlock": true },
+			"north": { "model": "sulviccore:oak_shelf", "y": 270, "uvlock": true }
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"forge_marker": 1,
+	"defaults": { "model": "sulviccore:gemstones" },
+	"variants": {
+		"type":{
+			"ruby": { "textures": { "gemstone": "sulviccore:blocks/gems/ruby" } },
+			"pink_panther": { "textures": { "gemstone": "sulviccore:blocks/gems/pink_panther" } },
+			"sapphire": { "textures": { "gemstone": "sulviccore:blocks/gems/sapphire" } },
+			"cassiterite": { "textures": { "gemstone": "sulviccore:blocks/gems/cassiterite" } },
+			"enstatite": { "textures": { "gemstone": "sulviccore:blocks/gems/enstatite" } },
+			"moonstone": { "textures": { "gemstone": "sulviccore:blocks/gems/moonstone" } },
+			"aquamarine": { "textures": { "gemstone": "sulviccore:blocks/gems/aquamarine" } },
+			"citrine": { "textures": { "gemstone": "sulviccore:blocks/gems/citrine" } },
+			"tourmaline": { "textures": { "gemstone": "sulviccore:blocks/gems/tourmaline" } },
+			"peridot": { "textures": { "gemstone": "sulviccore:blocks/gems/peridot" } },
+			"beryl": { "textures": { "gemstone": "sulviccore:blocks/gems/beryl" } },
+			"fire_agate": { "textures": { "gemstone": "sulviccore:blocks/gems/fire_agate" } },
+			"druzy": { "textures": { "gemstone": "sulviccore:blocks/gems/druzy" } },
+			"ametrine": { "textures": { "gemstone": "sulviccore:blocks/gems/ametrine" } },
+			"onyx": { "textures": { "gemstone": "sulviccore:blocks/gems/onyx" } }
+		}
+	}
+}

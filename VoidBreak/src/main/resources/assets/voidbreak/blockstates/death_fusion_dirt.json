@@ -1,0 +1,15 @@
+{
+	"forge_marker": 1,
+	"variants": {
+		"normal": [{ "model": "voidbreak:death_fusion_dirt" }, {
+			"model": "voidbreak:death_fusion_dirt",
+			"y": 90
+		}, {
+			"model": "voidbreak:death_fusion_dirt",
+			"y": 180
+		}, {
+			"model": "voidbreak:death_fusion_dirt",
+			"y": 270
+		}]
+	}
+}

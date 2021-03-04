@@ -1,0 +1,58 @@
+{
+	"forge_marker": 1,
+	"parent": "minecraft:block/block",
+	"textures": {
+		"particle": "#shelf",
+		"shelf": "#shelf"
+	},
+	"elements": [{
+		"from": [0, 0, 0],
+		"to": [16, 1, 16],
+		"faces": {
+			"north": {"uv": [0, 15, 16, 16], "texture": "#shelf"},
+			"east": {"uv": [0, 15, 16, 16], "texture": "#shelf"},
+			"south": {"uv": [0, 15, 16, 16], "texture": "#shelf"},
+			"west": {"uv": [0, 15, 16, 16], "texture": "#shelf"},
+			"up": {"uv": [0, 0, 16, 16], "texture": "#shelf"},
+			"down": {"uv": [0, 0, 16, 16], "texture": "#shelf"}
+		}
+	}, {
+		"from": [5.5, 1, 0],
+		"to": [16, 6.5, 16],
+		"rotation": {"angle": 0, "axis": "y", "origin": [23, 9, 8]},
+		"faces": {
+			"north": {"uv": [0, 9.5, 10.5, 15], "texture": "#shelf"},
+			"east": {"uv": [0, 9.5, 16, 15], "texture": "#shelf"},
+			"south": {"uv": [5.5, 9.5, 16, 15], "texture": "#shelf"},
+			"west": {"uv": [0, 9.5, 16, 15], "texture": "#shelf"},
+			"up": {"uv": [5.5, 0, 16, 16], "texture": "#shelf"},
+			"down": {"uv": [5.5, 0, 16, 16], "texture": "#shelf"}
+		}
+	}, {
+		"from": [10.5, 6.5, 0],
+		"to": [16, 12, 16],
+		"rotation": {"angle": 0, "axis": "y", "origin": [23, 14, 8]},
+		"faces": {
+			"north": {"uv": [0, 4, 5.5, 9.5], "texture": "#shelf"},
+			"east": {"uv": [0, 4, 16, 9.5], "texture": "#shelf"},
+			"south": {"uv": [10.5, 4, 16, 9.5], "texture": "#shelf"},
+			"west": {"uv": [0, 4, 16, 9.5], "texture": "#shelf"},
+			"up": {"uv": [10.5, 0, 16, 16], "texture": "#shelf"},
+			"down": {"uv": [10.5, 0, 16, 16], "texture": "#shelf"}
+		}
+	}],
+	"display": {
+		"thirdperson_lefthand": {
+			"rotation": [75, -135, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"gui": {
+			"rotation": [30, 135, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"rotation": [0, -90, 0]
+		}
+	}
+}

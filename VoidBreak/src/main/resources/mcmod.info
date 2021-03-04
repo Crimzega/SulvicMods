@@ -1,0 +1,14 @@
+[{
+	"modid": "voidbreak",
+	"name": "VoidBreak",
+	"description": "The additional mod for the rest of my content.",
+	"version": "${vb_version}",
+	"mcversion": "${mc_version}",
+	"url": "",
+	"updateUrl": "",
+	"authorList": ["Crimzega"],
+	"credits": "The Forge & FML team for making this mod possible.",
+	"logoFile": "",
+	"screenshots": [],
+	"dependencies": []
+}]

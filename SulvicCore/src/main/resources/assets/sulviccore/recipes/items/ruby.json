@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "sulvic_gems",
+	"ingredients": [{
+		"item": "sulviccore:gemstones",
+		"data": 0
+	}],
+	"result": {
+		"item": "sulviccore:gem",
+		"data": 0,
+		"count": 9
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"forge_marker": 1,
+	"parent": "minecraft:block/cube_all",
+	"textures": {
+		"all": "voidbreak:blocks/death_fusion_log"
+	}
+}

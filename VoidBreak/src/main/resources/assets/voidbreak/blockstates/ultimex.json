@@ -1,0 +1,11 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"textures": {
+			"ultimate": "voidbreak:blocks/ultimex"
+		}
+	},
+	"variants": {
+		"normal": [{ "model": "voidbreak:ultimate_block" }]
+	}
+}

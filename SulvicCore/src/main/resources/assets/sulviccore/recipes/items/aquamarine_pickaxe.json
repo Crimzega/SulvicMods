@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","group":"sulvic_pickaxe","pattern":["GGG"," S "," S "],"key":{"G":{"item":"sulviccore:gem","data":6},"S":{"item":"minecraft:stick"}},"result":{"item":"sulviccore:aquamarine_pickaxe"}}

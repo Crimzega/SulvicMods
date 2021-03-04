@@ -1,0 +1,8 @@
+{
+	"forge_marker": 1,
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "sulviccore:items/armor/colored/base_helmet",
+		"layer1": "sulviccore:items/armor/colored/glint_helmet"
+	}
+}
