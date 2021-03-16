@@ -1,0 +1,13 @@
+{
+	"forge_marker": 1,
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"particle": "#front",
+		"down": "#side",
+		"up": "#side",
+		"north": "#front",
+		"south": "#side",
+		"east": "#side",
+		"west": "#side"
+	}
+}

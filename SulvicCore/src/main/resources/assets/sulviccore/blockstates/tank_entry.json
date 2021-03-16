@@ -1,0 +1,19 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"textures": {
+			"side": "sulviccore:blocks/tank/base",
+			"front": "sulviccore:blocks/tank/entry",
+			"back": "sulviccore:blocks/tank/entry_back"
+		}
+	},
+	"variants": {
+		"normal": [{ "model": "sulviccore:tank_entry" }],
+		"facing": {
+			"east": { "model": "sulviccore:tank_entry", "y": 90, "uvlock": true },
+			"west": { "model": "sulviccore:tank_entry", "y": 270, "uvlock": true },
+			"south": { "model": "sulviccore:tank_entry", "y": 180, "uvlock": true },
+			"north": { "model": "sulviccore:tank_entry" }
+		}
+	}
+}

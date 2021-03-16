@@ -45,7 +45,9 @@ tile.gem.onyx.name=Block of Onyx
 tile.specialOre.name=Zéta Ore
 tile.special.name=Block of Zéta
 tile.specialWorkbench.name=Zéta Workbench
-tile.tank.name=Tank
+tile.tank.handler.name=Tank (Control Handler)
+tile.tank.base.name=Tank (Base)
+tile.tank.entry.name=Tank (Entry Point)
 
 item.gem.ruby.name=Ruby
 item.gem.pinkPanther.name=Pink Panther

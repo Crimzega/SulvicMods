@@ -2,16 +2,6 @@ package com.sulvic.core.common.item;
 
 import java.util.Map;
 
-import net.minecraft.client.renderer.color.IItemColor;
-import net.minecraft.entity.Entity;
-import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.StringUtils;
-import net.minecraftforge.common.IRarity;
-
 import com.google.common.collect.Maps;
 import com.sulvic.core.ReferenceSC;
 import com.sulvic.core.client.ColorHelper.IItemColorizer;
@@ -23,6 +13,15 @@ import com.sulvic.core.util.ArmorHelper;
 import com.sulvic.lib.DoubleKeyBasic;
 import com.sulvic.lib.DoubleKeySet;
 
+import net.minecraft.client.renderer.color.IItemColor;
+import net.minecraft.entity.Entity;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.StringUtils;
+import net.minecraftforge.common.IRarity;
+
 public class ItemArmorGem extends ItemArmor{
 	
 	private static final Map<DoubleKeySet<EnumGem, ArmorHelper>, ItemArmorGem> GEM_ARMOR = Maps.newHashMap();
@@ -32,7 +31,7 @@ public class ItemArmorGem extends ItemArmor{
 	private ArmorHelper armorType;
 	
 	public ItemArmorGem(EnumGem gem, ArmorHelper armor){
-		super(AzurilMaterials.getArmorMaterial(gem), 3, armor.getSlot());
+		super(AzurilMaterials.getArmorMaterial(gem), 0, armor.getSlot());
 		setCreativeTab(FolkrumTabs.EQUIP);
 		setRegistryName(ReferenceSC.MODID, gem.getName() + "_" + armor.getName());
 		setUnlocalizedName(gem.getUnlocalName() + armor.getUnlocalizedName());
@@ -52,20 +51,17 @@ public class ItemArmorGem extends ItemArmor{
 	
 	public boolean hasOverlay(ItemStack stack){ return true; }
 	
-	public int getColor(ItemStack stack){
-		NBTTagCompound nbtCompound = stack.getTagCompound();
-		if(nbtCompound != null){
-			NBTTagCompound displayCompound = nbtCompound.getCompoundTag("display");
-			if(displayCompound != null) displayCompound.setInteger("color", gemType.getColor());
-		}
-		return gemType.getColor();
-	}
+	public int getColor(ItemStack stack){ return gemType.getColor(); }
 	
 	public IRarity getForgeRarity(ItemStack stack){ return RegibaRarities.BASIC; }
 	
 	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type){
 		return ARMOR_PATH + (armorType.hasName("LEGGINGS")? 2: 1) + (!StringUtils.isNullOrEmpty(type)? "": "_glint") + ".png";
 	}
+	
+	public void setColor(ItemStack stack, int color){}
+	
+	public void removeColor(ItemStack stack){}
 	
 	public static class Colorizer implements IItemColorizer{
 		

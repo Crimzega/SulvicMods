@@ -39,8 +39,10 @@ public class SulvicClient extends AlvontixProxy{
 		ObjectHelper.registerBlockModel(SulvicObjects.SPECIAL_ORE);
 		ObjectHelper.registerBlockModels(SulvicObjects.GEM_BLOCKS, BlockGem.TYPE, SulvicObjects.EnumGem::getMetadata);
 		ObjectHelper.registerBlockModel(SulvicObjects.SPECIAL_BLOCK);
-		ObjectHelper.registerBlockModel(SulvicObjects.TANK);
 		ObjectHelper.registerBlockModel(SulvicObjects.SPECIAL_WORKBENCH);
+		ObjectHelper.registerBlockModel(SulvicObjects.TANK_HANDLER);
+		ObjectHelper.registerBlockModel(SulvicObjects.TANK_BASE);
+		ObjectHelper.registerBlockModel(SulvicObjects.TANK_ENTRY);
 		ObjectHelper.registerItemModels(SulvicObjects.GEMS, SulvicObjects.EnumGem.values());
 		ObjectHelper.registerItemModel(SulvicObjects.SPECIAL_DUST);
 		ObjectHelper.registerItemModel(SulvicObjects.SPECIAL_INGOT);

@@ -267,7 +267,7 @@ public class SulvicObjects{
 	
 	public static enum EnumTankSide{
 		
-		UNIVERSAL, TOP, BOTTOM, FRONT, BACK, EDGE, CORNER;
+		UNIVERSAL, TOP, BOTTOM, FRONT, BACK, EDGE, CORNER, SIDE;
 		
 	}
 	

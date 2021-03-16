@@ -2,9 +2,12 @@ package com.sulvic.core.common.block.tank;
 
 import com.sulvic.core.ReferenceSC;
 import com.sulvic.core.common.FolkrumTabs;
-import com.sulvic.core.common.SulvicObjects.*;
+import com.sulvic.core.common.SulvicObjects;
+import com.sulvic.core.common.SulvicObjects.EnumTankSide;
+import com.sulvic.core.common.SulvicObjects.ISulvicTankPiece;
 
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
 public class BlockTankBase extends Block implements ISulvicTankPiece{
@@ -19,6 +22,6 @@ public class BlockTankBase extends Block implements ISulvicTankPiece{
 		setUnlocalizedName("tank.base");
 	}
 	
-	public EnumTankSide getSide(){ return EnumTankSide.UNIVERSAL; }
+	public EnumTankSide getSide(){ return SulvicObjects.EnumTankSide.UNIVERSAL; }
 	
 }
