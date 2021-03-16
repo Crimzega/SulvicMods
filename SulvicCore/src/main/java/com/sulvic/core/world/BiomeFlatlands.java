@@ -16,6 +16,7 @@ public class BiomeFlatlands extends Biome{
 		fillerBlock = Blocks.DIRT.getDefaultState();
 		spawnableCreatureList.clear();
 		spawnableMonsterList.clear();
+		spawnableWaterCreatureList.clear();
 		spawnableMonsterList.add(new SpawnListEntry(EntityGiantZombie.class, 8, 1, 2));
 		decorator.grassPerChunk = 0;
 		decorator.treesPerChunk = 0;

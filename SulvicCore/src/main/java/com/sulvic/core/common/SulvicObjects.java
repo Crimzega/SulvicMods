@@ -1,72 +1,17 @@
 package com.sulvic.core.common;
 
-import static com.sulvic.core.world.gen.VeinInfo.create;
-import static net.minecraft.init.Biomes.BEACH;
-import static net.minecraft.init.Biomes.BIRCH_FOREST_HILLS;
-import static net.minecraft.init.Biomes.COLD_BEACH;
-import static net.minecraft.init.Biomes.COLD_TAIGA_HILLS;
-import static net.minecraft.init.Biomes.DEEP_OCEAN;
-import static net.minecraft.init.Biomes.DESERT;
-import static net.minecraft.init.Biomes.DESERT_HILLS;
-import static net.minecraft.init.Biomes.EXTREME_HILLS;
-import static net.minecraft.init.Biomes.EXTREME_HILLS_WITH_TREES;
-import static net.minecraft.init.Biomes.FOREST;
-import static net.minecraft.init.Biomes.FOREST_HILLS;
-import static net.minecraft.init.Biomes.FROZEN_OCEAN;
-import static net.minecraft.init.Biomes.FROZEN_RIVER;
-import static net.minecraft.init.Biomes.JUNGLE;
-import static net.minecraft.init.Biomes.JUNGLE_HILLS;
-import static net.minecraft.init.Biomes.MESA;
-import static net.minecraft.init.Biomes.MESA_CLEAR_ROCK;
-import static net.minecraft.init.Biomes.MESA_ROCK;
-import static net.minecraft.init.Biomes.MUSHROOM_ISLAND;
-import static net.minecraft.init.Biomes.MUSHROOM_ISLAND_SHORE;
-import static net.minecraft.init.Biomes.MUTATED_BIRCH_FOREST_HILLS;
-import static net.minecraft.init.Biomes.MUTATED_DESERT;
-import static net.minecraft.init.Biomes.MUTATED_EXTREME_HILLS;
-import static net.minecraft.init.Biomes.MUTATED_EXTREME_HILLS_WITH_TREES;
-import static net.minecraft.init.Biomes.MUTATED_MESA;
-import static net.minecraft.init.Biomes.MUTATED_MESA_CLEAR_ROCK;
-import static net.minecraft.init.Biomes.MUTATED_MESA_ROCK;
-import static net.minecraft.init.Biomes.MUTATED_REDWOOD_TAIGA_HILLS;
-import static net.minecraft.init.Biomes.MUTATED_SAVANNA;
-import static net.minecraft.init.Biomes.MUTATED_SAVANNA_ROCK;
-import static net.minecraft.init.Biomes.OCEAN;
-import static net.minecraft.init.Biomes.PLAINS;
-import static net.minecraft.init.Biomes.REDWOOD_TAIGA;
-import static net.minecraft.init.Biomes.REDWOOD_TAIGA_HILLS;
-import static net.minecraft.init.Biomes.RIVER;
-import static net.minecraft.init.Biomes.SAVANNA;
-import static net.minecraft.init.Biomes.SAVANNA_PLATEAU;
-import static net.minecraft.init.Biomes.STONE_BEACH;
-import static net.minecraft.init.Biomes.SWAMPLAND;
-import static net.minecraft.init.Biomes.TAIGA;
-import static net.minecraft.init.Biomes.TAIGA_HILLS;
+import static com.sulvic.core.world.gen.VeinInfo.*;
+import static net.minecraft.init.Biomes.*;
 
 import java.awt.Color;
 import java.util.Map;
 
 import com.google.common.collect.Maps;
 import com.sulvic.core.SulvicCore;
-import com.sulvic.core.common.block.BlockGem;
-import com.sulvic.core.common.block.BlockSpecial;
-import com.sulvic.core.common.block.BlockSpecialWorkbench;
-import com.sulvic.core.common.block.BlockTank;
-import com.sulvic.core.common.block.CropSweetPotato;
-import com.sulvic.core.common.block.OreGem;
-import com.sulvic.core.common.block.OreSpecial;
-import com.sulvic.core.common.item.ItemBlockGem;
-import com.sulvic.core.common.item.ItemGem;
-import com.sulvic.core.common.item.ItemArmorGem;
-import com.sulvic.core.common.item.ItemAxeGem;
-import com.sulvic.core.common.item.ItemHoeGem;
-import com.sulvic.core.common.item.ItemPickaxeGem;
-import com.sulvic.core.common.item.ItemSpadeGem;
-import com.sulvic.core.common.item.ItemSwordGem;
-import com.sulvic.core.common.item.ItemSpecialDust;
-import com.sulvic.core.common.item.ItemSpecialIngot;
-import com.sulvic.core.common.item.ItemSweetPotato;
-import com.sulvic.core.common.item.ItemWrench;
+import com.sulvic.core.common.block.*;
+import com.sulvic.core.common.block.tank.*;
+import com.sulvic.core.common.item.*;
+import com.sulvic.core.common.tileentity.TileSulvicTank;
 import com.sulvic.core.lib.ZimedaRegistry;
 import com.sulvic.core.util.ArmorHelper;
 import com.sulvic.core.world.BiomeFlatlands;
@@ -79,6 +24,7 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.fluids.IFluidTank;
 
 public class SulvicObjects{
 	
@@ -88,8 +34,10 @@ public class SulvicObjects{
 	public static final BlockGem GEM_BLOCKS = new BlockGem();
 	public static final BlockSpecial SPECIAL_BLOCK = new BlockSpecial();
 	public static final CropSweetPotato SWEET_POTATOES = new CropSweetPotato();
-	public static final BlockTank TANK = new BlockTank();
 	public static final BlockSpecialWorkbench SPECIAL_WORKBENCH = new BlockSpecialWorkbench();
+	public static final BlockTankHandler TANK_HANDLER = new BlockTankHandler();
+	public static final BlockTankBase TANK_BASE = new BlockTankBase();
+	public static final BlockTankEntry TANK_ENTRY = new BlockTankEntry();
 	public static final ItemGem GEMS = new ItemGem();
 	public static final ItemSpecialDust SPECIAL_DUST = new ItemSpecialDust();
 	public static final ItemSpecialIngot SPECIAL_INGOT = new ItemSpecialIngot();
@@ -120,8 +68,10 @@ public class SulvicObjects{
 		ZimedaRegistry.addBlock(GEM_BLOCKS, new ItemBlockGem(GEM_BLOCKS));
 		ZimedaRegistry.addBlock(SPECIAL_BLOCK);
 		ZimedaRegistry.addBlock(SWEET_POTATOES);
-		ZimedaRegistry.addBlock(TANK);
 		ZimedaRegistry.addBlock(SPECIAL_WORKBENCH);
+		ZimedaRegistry.addBlock(TANK_HANDLER);
+		ZimedaRegistry.addBlock(TANK_BASE);
+		ZimedaRegistry.addBlock(TANK_ENTRY);
 		ZimedaRegistry.addItem(GEMS);
 		ZimedaRegistry.addItem(SPECIAL_DUST);
 		ZimedaRegistry.addItem(SPECIAL_INGOT);
@@ -150,21 +100,21 @@ public class SulvicObjects{
 	
 	public static class GemInfo{
 		
-		protected static final GemInfo gemRuby = new GemInfo("ruby").setVeinInfo(create(4, 12, 2, 8, 3)).setColor(0xDD2F46);
-		protected static final GemInfo gemPinkPanther = new GemInfo("pink_panther", "pinkPanther").setVeinInfo(create(8, 20, 3, 6, 4)).setColor(0xFF40FF);
-		protected static final GemInfo gemSapphire = new GemInfo("sapphire").setVeinInfo(create(4, 12, 2, 5, 3)).setColor(0x7E3E7E);
-		protected static final GemInfo gemCassiterite = new GemInfo("cassiterite").setVeinInfo(create(6, 17, 6, 9, 6)).setColor(0x151515);
-		protected static final GemInfo gemEnstatite = new GemInfo("enstatite").setVeinInfo(create(4, 12, 4, 9, 4)).setColor(0xE7B600);
-		protected static final GemInfo gemMoonstone = new GemInfo("moonstone").setVeinInfo(create(4, 12, 2, 8, 5)).setColor(0xFFFF61);
-		protected static final GemInfo gemAquamarine = new GemInfo("aquamarine").setVeinInfo(create(4, 12, 2, 5, 7)).setColor(0x8ec2FF);
-		protected static final GemInfo gemCitrine = new GemInfo("citrine").setVeinInfo(create(6, 14, 3, 9, 5)).setColor(0xFF9200);
-		protected static final GemInfo gemTourmaline = new GemInfo("tourmaline").setVeinInfo(create(4, 12, 2, 5, 5)).setColor(0xFF8499);
-		protected static final GemInfo gemPeridot = new GemInfo("peridot").setVeinInfo(create(5, 14, 4, 6, 4)).setColor(0x00FF21);
-		protected static final GemInfo gemBeryl = new GemInfo("beryl").setVeinInfo(create(7, 12, 2, 10, 3)).setColor(0x3BC9D6);
-		protected static final GemInfo gemFireAgate = new GemInfo("fire_agate", "fireAgate").setVeinInfo(create(8, 20, 2, 8, 5)).setColor(0xD85900);
-		protected static final GemInfo gemDruzy = new GemInfo("druzy").setVeinInfo(create(4, 18, 4, 10, 6)).setColor(0x3D1386);
-		protected static final GemInfo gemAmetrine = new GemInfo("ametrine").setVeinInfo(create(6, 12, 4, 8, 4)).setColor(0x4F2454);
-		protected static final GemInfo gemOnyx = new GemInfo("onyx").setVeinInfo(create(7, 19, 3, 9, 4)).setColor(0x343434);
+		protected static final GemInfo gemRuby = new GemInfo("ruby").setVeinInfo(create(4, 12, 2, 8, 2)).setColor(0xDD2F46);
+		protected static final GemInfo gemPinkPanther = new GemInfo("pink_panther", "pinkPanther").setVeinInfo(create(8, 20, 3, 6, 2)).setColor(0xFF40FF);
+		protected static final GemInfo gemSapphire = new GemInfo("sapphire").setVeinInfo(create(4, 12, 2, 5, 2)).setColor(0x7E3E7E);
+		protected static final GemInfo gemCassiterite = new GemInfo("cassiterite").setVeinInfo(create(6, 17, 6, 9, 3)).setColor(0x151515);
+		protected static final GemInfo gemEnstatite = new GemInfo("enstatite").setVeinInfo(create(4, 12, 4, 9, 2)).setColor(0xE7B600);
+		protected static final GemInfo gemMoonstone = new GemInfo("moonstone").setVeinInfo(create(4, 12, 2, 8, 3)).setColor(0xFFFF61);
+		protected static final GemInfo gemAquamarine = new GemInfo("aquamarine").setVeinInfo(create(4, 12, 2, 5, 3)).setColor(0x8ec2FF);
+		protected static final GemInfo gemCitrine = new GemInfo("citrine").setVeinInfo(create(6, 14, 3, 9, 3)).setColor(0xFF9200);
+		protected static final GemInfo gemTourmaline = new GemInfo("tourmaline").setVeinInfo(create(4, 12, 2, 5, 3)).setColor(0xFF8499);
+		protected static final GemInfo gemPeridot = new GemInfo("peridot").setVeinInfo(create(5, 14, 4, 6, 2)).setColor(0x00FF21);
+		protected static final GemInfo gemBeryl = new GemInfo("beryl").setVeinInfo(create(7, 12, 2, 10, 2)).setColor(0x3BC9D6);
+		protected static final GemInfo gemFireAgate = new GemInfo("fire_agate", "fireAgate").setVeinInfo(create(8, 20, 2, 8, 3)).setColor(0xD85900);
+		protected static final GemInfo gemDruzy = new GemInfo("druzy").setVeinInfo(create(4, 18, 4, 10, 3)).setColor(0x3D1386);
+		protected static final GemInfo gemAmetrine = new GemInfo("ametrine").setVeinInfo(create(6, 12, 4, 8, 2)).setColor(0x4F2454);
+		protected static final GemInfo gemOnyx = new GemInfo("onyx").setVeinInfo(create(7, 19, 3, 9, 2)).setColor(0x343434);
 		protected int gemColor;
 		protected VeinInfo veinInfo;
 		protected String theName, unlocalName;
@@ -296,6 +246,28 @@ public class SulvicObjects{
 		public String getUnlocalName(){ return theInfo.unlocalName; }
 		
 		public VeinInfo getVeinInfo(){ return theInfo.veinInfo; }
+		
+	}
+	
+	public static interface ISulvicTankPiece{
+		
+		EnumTankSide getSide();
+		
+	}
+	
+	public static interface ISulvicTankMain extends ISulvicTankPiece{}
+	
+	public static interface ISulvicTankEntry extends IFluidTank, ISulvicTankPiece{
+		
+		TileSulvicTank getTank();
+		
+		void setTank(TileSulvicTank tank);
+		
+	}
+	
+	public static enum EnumTankSide{
+		
+		UNIVERSAL, TOP, BOTTOM, FRONT, BACK, EDGE, CORNER;
 		
 	}
 	

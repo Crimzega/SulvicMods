@@ -4,10 +4,13 @@ import static com.sulvic.util.SulvicMath.clampInt;
 import static com.sulvic.util.SulvicMath.rangedInt;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import com.google.common.collect.Lists;
 
 @SuppressWarnings({"unchecked"})
 public class SulvicCollections{
@@ -53,5 +56,47 @@ public class SulvicCollections{
 	}
 	
 	public static <T> T getRandomObject(Set<T> set){ return getRandomObject((Collection<T>)set); }
+	
+	public static List<Byte> sortedValues(byte... values){
+		List<Byte> list = Lists.newArrayList();
+		for(byte value: values) list.add(Byte.valueOf(value));
+		Collections.sort(list);
+		return list;
+	}
+	
+	public static List<Float> sortedValues(float... values){
+		List<Float> list = Lists.newArrayList();
+		for(float value: values) list.add(Float.valueOf(value));
+		Collections.sort(list);
+		return list;
+	}
+	
+	public static List<Double> sortedValues(double... values){
+		List<Double> list = Lists.newArrayList();
+		for(double value: values) list.add(Double.valueOf(value));
+		Collections.sort(list);
+		return list;
+	}
+	
+	public static List<Long> sortedValues(long... values){
+		List<Long> list = Lists.newArrayList();
+		for(long value: values) list.add(Long.valueOf(value));
+		Collections.sort(list);
+		return list;
+	}
+	
+	public static List<Integer> sortedValues(int... values){
+		List<Integer> list = Lists.newArrayList();
+		for(int value: values) list.add(Integer.valueOf(value));
+		Collections.sort(list);
+		return list;
+	}
+	
+	public static List<Short> sortedValues(short... values){
+		List<Short> list = Lists.newArrayList();
+		for(short value: values) list.add(Short.valueOf(value));
+		Collections.sort(list);
+		return list;
+	}
 	
 }

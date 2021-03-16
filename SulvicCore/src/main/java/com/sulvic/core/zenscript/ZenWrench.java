@@ -72,7 +72,7 @@ public class ZenWrench{
 			}
 		}
 		
-		public String describe(){ return "Attempting to add new wrenchable block: " + newBlock.getLocalizedName(); }
+		public String describe(){ return "Adding new wrenchable block: " + newBlock.getLocalizedName(); }
 		
 	}
 	
@@ -94,7 +94,7 @@ public class ZenWrench{
 			maxDamage = max;
 		}
 		
-		public String describe(){ return "Attempting to alter wrench damage to: " + getWrenchable(chosenBlock); }
+		public String describe(){ return "Altering wrench damage to: " + getWrenchable(chosenBlock); }
 		
 		public void apply(){
 			if(hasWrenchable(chosenBlock)){
@@ -111,7 +111,7 @@ public class ZenWrench{
 		
 		public RemoveBlockAction(IItemStack block){ CraftTweakerMC.getBlock(block); }
 		
-		public String describe(){ return "Attempting to remove wrenchable:" + getWrenchable(chosenBlock); }
+		public String describe(){ return "Removing wrenchable:" + getWrenchable(chosenBlock); }
 		
 		public void apply(){ if(hasWrenchable(chosenBlock)) removeWrenchable(chosenBlock); }
 		
